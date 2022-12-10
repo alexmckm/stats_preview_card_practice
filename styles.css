@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0c1b;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteneur {
+    margin: 5.4rem 1.5rem;
+    display: grid;
+    grid-template:
+    auto
+    auto
+    / 1fr;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 390px;
+}
+
+.img-mobile {
+    width: 100%;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.img-desktop {
+    display: none;
+    width: 100%;
+}
+
+.fond-violet {
+    background: #a400d0;
+    opacity: 0.3;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+h1 {
+    font-size: 1.7rem;
+}
+
+.insights {
+    font-size: inherit;
+    color: #a35fd0;
+}
+
+.explications {
+    background-color: #1c1938;
+    padding: 1.4rem;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+.description {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.stats {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: hsla(0, 0%, 100%, 0.6);
+    margin: 1em;
+}
+
+div strong {
+    color: white;
+    font-size: 1.4rem;
+}
+
+div p {
+    margin: 0.5rem;
+    letter-spacing: 0.05rem;
+}
+
+
+@media (min-width: 1052px) {
+
+    .img-mobile {
+        display: none
+    }
+
+    .img-desktop {
+        display: block;
+        grid-area: 1 / 2 / 2 / 3 ;
+    }
+
+    .fond-violet {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .conteneur {
+        grid-template:
+        1fr
+        / 52% 48%;
+        max-width: 1110px;
+        max-height: 446px;
+        position: fixed;
+        top: 20%;
+        transform: translate(0, -20%);
+    }
+
+    .explications {
+        grid-template:
+        auto
+        auto
+        auto
+        / 1fr 1fr 1fr;
+        text-align: start;
+        padding: 4rem;
+        padding-right: 7rem;
+    }
+
+    .companies {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .template {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    .queries {
+        grid-area: 3 / 3 / 4 / 4;
+    }
+
+    h1 {
+        grid-area: 1 / 1 / 2 / 4;
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .description {
+        grid-area: 2 / 1 / 3 / 4;
+        margin: 0;
+        margin-bottom: 2rem;
+        font-size: 0.9rem;
+    }
+
+    .stats {
+        margin-left: 0;
+    }
+
+    .stats p {
+        margin-left: 0;
+    }
+
+
+
+
+}
